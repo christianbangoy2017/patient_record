@@ -22,7 +22,9 @@
 @endif
 
 
-<div class="content" id="mainContent">
+<!-- <div class="content" id="mainContent"> -->
+<div id="mainContent" class="content transition" style="margin-left: 250px; transition: all 0.3s;">
+  
     <div class="container mt-3">
         <div class="card shadow p-2 text-left">
             <div class="d-flex justify-content-between align-items-center mb-3">

@@ -1,0 +1,47 @@
+/* Light Mode Styles (Default) */
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #000;
+}
+
+#sidebar {
+    background-color: #ffffff;
+    color: #000;
+}
+
+#sidebar .nav-link {
+    color: #000;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .navbar {
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode #sidebar {
+    background-color: #222 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode #sidebar .nav-link {
+    color: #ffffff !important;
+}
+
+.dark-mode #sidebar .nav-link:hover {
+    background-color: #444 !important;
+}

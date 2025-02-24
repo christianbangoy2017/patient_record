@@ -39,3 +39,14 @@ Route::delete('/destroy/{id}', [PatientsController::class, 'destroy'])->name('pa
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('home.dashboard');
 
 
+Route::get('/reports', function () {
+    return view('reports.index');
+})->name('reports.index');
+
+Route::get('/users', function () {
+    return view('users.index');
+})->name('users.index');
+
+Route::get('/logout', function () {
+    return view('logout.index');
+})->name('logout');
