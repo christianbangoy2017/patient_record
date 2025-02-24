@@ -9,8 +9,10 @@ class HomeController extends Controller
 {
     //
     public function index() {
-        // $patients = Patients::All();
-        $patients = Patients::select('name','address','contactno','birthdate','email')->get();
+       
+        $patients = Patients::select('id','name','address','contactno','birthdate','email')->paginate(5);
         return view ('home.index',compact('patients'));
     }
+
+    
 }

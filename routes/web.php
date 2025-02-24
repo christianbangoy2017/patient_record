@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +31,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/create', [PatientsController::class, 'create'])->name('patients.create');
 Route::post('/store', [PatientsController::class, 'store'])->name('patients.store');
+Route::get('/edit/{id}', [PatientsController::class, 'edit'])->name('patients.edit');
+Route::put('/update/{id}', [PatientsController::class, 'update'])->name('patients.update');
+Route::get('/search', [PatientsController::class, 'search'])->name('patients.search');
+Route::delete('/destroy/{id}', [PatientsController::class, 'destroy'])->name('patients.destroy');
+
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('home.dashboard');
+
+
