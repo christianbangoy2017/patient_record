@@ -13,7 +13,12 @@
             <a class="nav-link" href="{{ route('users.index') }}">👤 Users</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="{{ route('logout') }}">🚪 Logout</a>
+            <!-- <a class="nav-link text-danger" href="{{ route('logout') }}">🚪 Logout</a> -->
+
+            <form method="POST" action="{{ route('logout') }}" class="m-0">
+                @csrf                
+                <button type="submit" class="btn btn-outline-danger btn-sm w-100">🗑 Logout</button>
+            </form>
         </li>
     </ul>
 </div>

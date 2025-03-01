@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,10 @@ Route::delete('/destroy/{id}', [PatientsController::class, 'destroy'])->name('pa
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('home.dashboard');
 
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 Route::get('/reports', function () {
     return view('reports.index');
@@ -50,3 +55,4 @@ Route::get('/users', function () {
 Route::get('/logout', function () {
     return view('logout.index');
 })->name('logout');
+
